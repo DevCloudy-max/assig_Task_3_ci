@@ -1,0 +1,27 @@
+name: Intgration test
+
+on:
+    push:
+        branches:
+        - main
+
+jobs:
+    Integration-Test:
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout gitrepo
+              uses: actions/checkout@v2
+
+            - name: setup node
+              uses: actions/setup-node@v3
+              with:
+                node-version: '18'
+
+            - name: install dependencies
+              run: npm install
+
+            - name: Directories  & Files
+              run: ls -l
+            
+            - name: Run Integration Test
+              run: npm test
