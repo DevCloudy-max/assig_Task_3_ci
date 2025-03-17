@@ -27,4 +27,4 @@ jobs:
               run: npm install -g jest
             
             - name: Run Integration Test
-              run: npm test
+              run: npm test & 
