@@ -22,6 +22,9 @@ jobs:
 
             - name: Directories  & Files
               run: ls -l
+
+            - name: Install Jest
+              run: npm install -g jest
             
             - name: Run Integration Test
               run: npm test
